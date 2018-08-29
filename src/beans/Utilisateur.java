@@ -40,16 +40,5 @@ public class Utilisateur {
 	public void setRole(boolean role) {
 		this.role = role;
 	}
-	public void userExist() {
-		
-		String sqlQuery = "SELECT nom,prenom,C.NB_TASSES FROM PROGRAMMEURS P INNER JOIN CONSOS_CAFE C ON P.ID = C.PROGRAMMEUR ORDER BY nb_tasses DESC LIMIT 1";
-		statement = conn.createStatement();
-		resultat = statement.executeQuery(sqlQuery);
-		resultat.next();
-		String nomProgrammeur = resultat.getString( "nom" );
-		String prenomProgrammeur = resultat.getString( "prenom" );
-		int tasses = resultat.getInt( "NB_TASSES" );
-		System.out.println("Programmeur : " + nomProgrammeur + " " + prenomProgrammeur + "\nnb Tasses bu = "+ tasses);
-	}
     
 }
