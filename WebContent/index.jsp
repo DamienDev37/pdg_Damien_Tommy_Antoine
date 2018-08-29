@@ -8,6 +8,6 @@
 <title>Page index</title>
 </head>
 <body>
-	<c:import url="WEB-INF/inc/menu.jsp" />
+	
 </body>
 </html>
